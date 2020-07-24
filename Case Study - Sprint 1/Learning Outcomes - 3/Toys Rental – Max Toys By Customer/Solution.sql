@@ -1,0 +1,7 @@
+alter session set current_schema = mt_toy;
+SET heading OFF
+
+SELECT DISTINCT CUSTOMER_ID FROM TOY_RENTAL
+JOIN TOY
+ON TOY_RENTAL.TOY_ID = TOY.TOY_ID
+WHERE CUSTOMER_ID = 1010;
