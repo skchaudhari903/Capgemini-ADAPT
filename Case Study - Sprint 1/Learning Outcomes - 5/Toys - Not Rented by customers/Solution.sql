@@ -1,0 +1,7 @@
+alter session set current_schema = mt_toy;
+SET heading OFF
+
+SELECT TOY_NAME FROM TOY
+WHERE NOT EXISTS
+(SELECT TOY_ID FROM TOY_RENTAL
+WHERE TOY.TOY_ID = TOY_RENTAL.TOY_ID);

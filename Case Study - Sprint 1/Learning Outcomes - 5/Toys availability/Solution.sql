@@ -1,0 +1,8 @@
+alter session set current_schema = mt_toy;
+SET heading OFF
+
+SELECT TOY_ID, TOY_NAME FROM TOY
+WHERE TOY_ID IN
+(SELECT TOY_ID FROM TOY_RENTAL
+WHERE STATUS = 'Rented'
+AND TO_CHAR(RENTAL_END_DATE, 'DD-MON-YYYY') = '31-JUL-2020');
