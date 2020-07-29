@@ -1,0 +1,50 @@
+<!-- 
+Define the New User Registration Form in a span element by applying the style (background color with #000080,text color with #ff6600,align the text in center).
+This element should be inside the h2 element and apply style.
+Note: You should apply background only for the New User Registration Form Text
+Define bold element
+FirstName, LastName, Email, Password, Confirm Password, Mobile Number, Gender,Country, Date of Birth should be paragraphs.
+apply color - #800080; using style attribute
+Firstname is a textbox
+Lastname is a textbox
+Email is a textbox
+Password field is password box
+Mobile number is a textbox
+Create radio buttons to enter Gender
+Create country drop down list box
+following countries should be added
+India
+China
+USA
+Create Dob as a input type Date
+Submit form is a button with label “Submit” 
+-->
+
+<html>
+    <body>
+        
+        <h2 align = "center" style = "color: #ff6600;">
+            <span style = "color : #ff6600; background-color : #000080; text-align : center;">New User Registration Form</span>
+        </h2>
+        <p style="color: #800080;">
+        <b>
+            First name: <input type="text" />
+            Last name: <input type="text" />
+            Email: <input type="text" />
+            Password: <input type="password" />
+            Confirm Password: <input type="password" />
+            Mobile number: <input type="text" />
+            Gender:
+            <input type="radio" value="Male" /> Male 
+            <input type="radio" value="Female" /> Female
+            Country:<select>
+                <option value="India">India</option>
+                <option value="China">China</option>
+                <option value="USA">USA</option>
+            </select>
+            Date of Birth: <input type="date" />
+            <input type="button" value="Submit" />
+        </b>
+        </p>
+    </body>
+</html>
