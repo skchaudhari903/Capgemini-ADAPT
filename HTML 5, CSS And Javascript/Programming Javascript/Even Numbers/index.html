@@ -1,0 +1,26 @@
+<!-- 
+Design a Web page to display the sum of even numbers between 1 to 20.
+Display heading using H1 tag.
+Write a javascript function which should calculate the sum and
+display the result in a div tag with id “result”
+ -->
+
+<html>
+    <head>
+        <title> Even Number Sum </title>
+    </head>
+    <body onload = "EvenSum()">
+        <h1>Display Even Number & Sum</h1>
+        <div id = "result"> </div>
+        <script language = "Javascript">
+            function EvenSum(){
+                var num = 0, sum = 0;
+                while(num <= 20){
+                    sum += num;
+                    num += 2;
+                }
+                document.getElementById('result').innerHTML = 'Total:' +sum;
+            }
+        </script>
+    </body>
+</html>
