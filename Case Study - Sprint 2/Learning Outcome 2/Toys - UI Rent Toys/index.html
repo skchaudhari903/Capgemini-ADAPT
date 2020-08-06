@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title> Rent Toys </title>
+        <script>
+            function ShowRent()
+            {
+                var name= document.getElementById("name").value;
+                var days=parseInt(document.getElementById("tenure").value);
+                rent_amt=100;
+                var qty= parseInt(document.getElementById("total").value);
+                rent = 100 * days * qty;
+                val=confirm("Rent for Toys Selected:" + rent);
+                if (val==true)
+                    alert("Thank You for Order" + name);
+                 }
+    
+            function CheckName()
+            {
+                var name= document.getElementById("name").value;
+                if(/[a-zA-Z]{5,}/.test(name))
+                    alert("Name ok");
+                else
+                    alert("Minimum 5 Characters and only one special character allowed");
+            }
+    
+            function CheckRent()
+            {
+                var rent=document.getElementById("tenure").value;
+                if(rent>30)
+                    alert("We cannot rent over than 30 days");
+                else
+                    alert("Allowed");
+            }
+        </script>
+    </head>
+    <body>
+        <h2><span style="background color:#000080; color:#ff6600;">Rent Toys</span></h2>
+        <table>
+            <tr><td>Toy Name</td>
+            <td><select>
+                <option>Bicycle</option>
+                <option>Train</option>
+                <option>Doll</option>
+                <option>Teddr Bear</option>
+                <option>Kite</option>
+                <option>Airplane</option>
+                <option>Model Car</option>
+                <option>Art Farm</option>
+                <option>Lego Mind storms</option>
+                <option>Speak and Spell</option>
+            </select></td></tr>
+            <tr><td>Customer Name</td><td><input type="text" id="name" onblur="CheckName()"/></td></tr>
+            <tr><td>Rent Start Date</td><td><input type="text" id="startdate" placeholder="mm/dd/yyyy"/></td></tr>
+            <tr><td>Rent Tenure</td><td><input type="text" id="tenure" onblur="CheckRent()"/></td></tr>
+            <tr><td>Number of Toys Available</td><td><input type="text" id="toysavail"/></td></tr>
+            <tr><td>Enter number of toys</td><td><input type="text" id="numoftoys"/></td></tr>
+            <tr><td></td><td><input type="button" onclick="ShowRent()" value="Submit Query" /></td></tr>
+        </table>
+    </body>
+</html>
