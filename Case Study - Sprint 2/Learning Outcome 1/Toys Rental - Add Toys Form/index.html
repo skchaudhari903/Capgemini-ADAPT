@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Add Toys</title>
+    </head>
+    <body>
+        <script language = "Javascript">
+        function validate()
+        {
+            var Toy_Name = document.getElementById("name").value;
+            var Toy_Type = document.getElementById("type").value;
+            var Quantity = parseInt(document.getElementById("quantity").value);
+            var Price = parseInt(document.getElementById("price").value);
+            var Amount = parseInt(document.getElementById("amt").value);
+            
+            if(/^([a-zA-Z0-9_-]){3,}$/.test(Toy_Name))
+                alert("Name Ok");
+            else
+                alert("Name Not Ok");
+
+            if(/^([a-zA-Z0-9_-]){5,}$/.test(Toy_Type))
+                alert("Type Ok");
+             else
+                alert("Type Not Ok");
+
+            if(!isNaN(Quantity) && Quantity>0)
+                alert("Quantity Ok");
+            else
+                alert("Quantity Not Ok");
+
+            if(!isNaN(Price) && Price>0)
+                alert("Price Ok");
+            else
+                alert("Price Not Ok");
+
+            if(Amount>=5)
+                alert("Amount Ok");
+            else
+                alert("Amount Not Ok");
+        </script>
+        <h2>
+            <span style="background-color: #000080; color: #ff6600;">Add Toys</span>
+        </h2>
+        <table>
+            <tr><td>Toy Name</td><td><input type="text" id="name"/></td></tr>
+            <tr><td>Toy type</td><td><input type="text" id="type"/></td></tr>
+            <tr><td>Min-Age</td><td><input type="text" /></td></tr>
+            <tr><td>Max-Age</td><td><input type="text" /></td></tr>
+            <tr><td>Price</td><td><input type="text" id="price"/></td></tr>
+            <tr><td>Quantity Available in Stock</td><td><input type="text" id="quantity"/></td></tr>
+            <tr><td>Rental amount per day</td><td><input type="text" id="amt"/></td></tr>
+            <tr><td></td><td><input type="submit" value="Submit Query" onclick="validate()" /></td></tr>
+        </table>
+    </body>
+</html>
