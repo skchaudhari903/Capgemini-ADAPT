@@ -31,18 +31,12 @@ class CricketPlayer : Player
     }
     
     public override int getRating(){
-        if(averageRuns > 55)
-            return 7;
-        else if(averageRuns > 50)
-            return 6;
-        else if(averageRuns > 40)
-            return 5;
-        else if(averageRuns > 30)
-            return 3;
-        else if(averageRuns > 20)
-            return 2;
-        else
-            return 1;
+        if(averageRuns > 55) return 7;
+        else if(averageRuns > 50) return 6;
+        else if(averageRuns > 40) return 5;
+        else if(averageRuns > 30) return 3;
+        else if(averageRuns > 20) return 2;
+        else return 1;
     }
 }
 
@@ -56,15 +50,10 @@ class FootballPlayer : Player{
     }
     
     public override int getRating(){
-        if(goals > 20)
-            return 5;
-        else if(goals > 15)
-            return 4;
-        else if(goals > 10)
-            return 3;
-        else if(goals > 5)
-            return 2;
-        else
-            return 1;
+        if(goals > 20) return 5;
+        else if(goals > 15) return 4;
+        else if(goals > 10) return 3;
+        else if(goals > 5) return 2;
+        else return 1;
     }
 }
