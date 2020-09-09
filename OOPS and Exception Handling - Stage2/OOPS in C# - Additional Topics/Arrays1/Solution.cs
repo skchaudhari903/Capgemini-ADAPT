@@ -19,15 +19,12 @@ namespace LearnCsharp
             for(int i = 0; i < n; i++)
                 array[i] = Convert.ToInt32(Console.ReadLine());
             
-            int max = array[0];
-            int min = array[0];
-            for(int i = 1; i < n; i++){
-                if(max < array[i])
-                    max = array[i];
-                if(min > array[i])
-                    min = array[i];
-            }
+			Array.Sort(array);
+			
+			int min = array[0]; 
             Console.WriteLine("MIN=" + min);
+			
+			int max = array[n-1];
             Console.WriteLine("MAX=" + max);
         }
         

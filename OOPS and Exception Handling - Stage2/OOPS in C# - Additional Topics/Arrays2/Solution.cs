@@ -23,15 +23,12 @@ namespace LearnCsharp
                 array[i] = Convert.ToInt32(Console.ReadLine());
                 
             Array.Sort(array);
-            if(n % 2 == 0){
-                foreach(int element in array)
-                    Console.Write(element+" ");
-            }
-            else{
-                Array.Reverse(array);
-                foreach(int element in array)
-                    Console.Write(element+" ");
-            }
+            if(n % 2 != 0)
+				Array.Reverse(array);
+				
+                
+            foreach(int element in array)
+				Console.Write(element+" ");
         }
 
         }
