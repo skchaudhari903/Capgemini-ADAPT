@@ -25,11 +25,11 @@ namespace LearnCsharp
             int [] arr = new int[2];
             
             iRowSum = 0;
-            for(int i = 0; i <= 1; i++)
+            for (int i = 0; i < 2; i++)
             {
-                arr[i] = 0;
-                iRowSum = 0;
-                for(int j = 0; j <= 1; j++)
+                arr[i]=0;
+                iRowSum=0;
+                for(int j = 0; j < 2; j++)
                 {
                     Console.Write(iMatrix[i,j] + "|");
                     iRowSum = iRowSum + iMatrix[i,j];
