@@ -1,8 +1,8 @@
-using System;
 /*Write a program to accept an array of integers. Sort the array in ascending or descending order according to the user’s choice.  
 Array elements are entered by the user, with the first line of input indicating A for ascending or D for descending sort followed by the integer values.
-
 */
+
+using System;
 
 namespace LearnCsharp
 {
