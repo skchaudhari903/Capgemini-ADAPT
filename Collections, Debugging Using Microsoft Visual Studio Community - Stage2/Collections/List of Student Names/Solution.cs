@@ -20,12 +20,8 @@ namespace LearnCsharp
             for(int i=0;i<max;i++)
             {
                 item = Console.ReadLine();
-                alObj.Add(item);
-            }
-            for(int i=0;i<max/2;i++)
-            {
-                if(alObj.Contains("Nobody")) alObj.RemoveAt(alObj.IndexOf("Nobody"));
-                else if(alObj.Contains("Somebody")) alObj.RemoveAt(alObj.IndexOf("Somebody"));
+                if(item != "Somebody" && item !="Nobody")
+                    alObj.Add(item);
             }
             
             alObj.Sort();

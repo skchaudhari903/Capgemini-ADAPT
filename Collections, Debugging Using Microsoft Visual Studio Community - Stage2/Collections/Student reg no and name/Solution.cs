@@ -12,9 +12,8 @@ class StudentDetails
     
     public static void GetData(string[] data,Hashtable student_table)
     {
-        student_table.Add(data[0], data[1]);
-        student_table.Add(data[2], data[3]);
-        //student_table.Add(data[4], data[5]);
+        for(int i = 0; i < data.Length-1; i += 2)
+            student_table.Add(data[i], data[i+1]);
     }
 
     public static void DisplayTable(Hashtable ht)
