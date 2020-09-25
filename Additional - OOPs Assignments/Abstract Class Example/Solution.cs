@@ -38,9 +38,9 @@ public class AbstractClassExample
 {
     public static void Main(string[] args)
     {
-        B bObj = new B();
-        bObj.method1();
-        bObj.method2();
+        B b = new B();
+        b.method1();
+        b.method2();
     }
 
 }
