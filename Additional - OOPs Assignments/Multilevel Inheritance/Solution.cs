@@ -16,6 +16,8 @@ Emp Bonus is = 3000
 
 Emp Role is = Leader
 
+Note : Create object of the SalesManagement class in the Main() and initialize all necessary variables with the help of member functions defined inside the class.The program doesnot take any input data .Argument for all member functions is hard coded in the program to get the required output
+
 */
 
 using System;
