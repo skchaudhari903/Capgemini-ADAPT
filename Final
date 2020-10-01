@@ -1,0 +1,123 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace fundamentals
+{
+    class User
+    {
+        private int userid;
+        private string fname;
+        private string lname;
+        private int age;
+        private string city;
+        private string country;
+
+        public int Userid
+        {
+            get { return userid; }
+            set { userid = value; }
+        }
+        public string Fname
+        {
+            get { return fname; }
+            set { fname = value; }
+        }
+        public string Lname
+        {
+            get { return lname; }
+            set { lname = value; }
+        }
+        public int Age
+        {
+            get { return age; }
+            set { age = value; }
+        }
+        public string City
+        {
+            get { return city; }
+            set { city = value; }
+        }
+        public string Country
+        {
+            get { return country; }
+            set { country = value; }
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<User> userlist = new List<User>();
+            Console.WriteLine(" 1.Print \n 2.Add \n 3.Delete \n 4.Find By city");
+            int opt = Convert.ToInt32(Console.ReadLine());
+
+            switch (opt)
+            {
+                case 1:
+                    Printdetails(userlist);
+                    break;
+                case 2:
+                    User obj = new User { Userid = 1, Fname = "Harshad", Lname = "Borkar", Age = 22, City = "Sindi", Country = "India" };
+                    AddNewUser(userlist, obj);
+                    Console.WriteLine("User Created Succesfully");
+                    Printdetails(userlist);
+                    break;
+                case 3:
+                    Console.WriteLine("Enter the user Id");
+                    int id = Convert.ToInt32(Console.ReadLine());
+                    User obj2 = new User();
+                    foreach(User u in userlist)
+                    {
+                        if (u.Userid == id)
+                        {
+                            obj2 = u;
+                        }
+                    }
+                    userlist.Remove(obj2);
+                    break;
+                case 4:
+                    string city = Console.ReadLine();
+                    List < User > l2= FindUserByCity(userlist, city);
+                    foreach(User u in l2)
+                    {
+                        Console.WriteLine();
+                    }
+                    break;
+
+                default:
+                    Console.WriteLine("Record not found");
+                    break;
+            }
+
+        }
+
+        private static List<User> FindUserByCity(List<User> l1, string city)
+        {
+            List<User> l3 = new List<User>();
+            foreach(User u in l1)
+            {
+                if(u.City == city)
+                {
+                    l3.Add(u);
+                }
+            }
+            return l3;
+
+        }
+
+        private static void AddNewUser(List<User> l1, User obj)
+        {
+            l1.Add(obj);
+        }
+
+        private static void Printdetails(List<User> l1)
+        {
+            foreach (User u in l1)
+            {
+                Console.WriteLine("UserID=" + u.Userid + "\n" + "Name=" + u.Fname + u.Lname + "\n" + "Age=" + u.Age + "\n" + "City=" + u.City +"\n"+ "Country=" + u.Country);
+            }
+        }
+    }
+}
